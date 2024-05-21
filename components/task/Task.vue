@@ -66,7 +66,7 @@
   </div>
 
   <AddModalComponent v-if="modalOpen" :modalOpen="modalOpen" :type="modalType" @close="closeModal"
-                     @add="handleAdd" :task="taskToEdit" @save="saveTask"></AddModalComponent>
+                     @add="handleAdd" :task="taskToEdit" @update="saveTask"></AddModalComponent>
 
   <AnswerModalComponent v-if="showSuccessModal" :showSuccessModal="showSuccessModal" @close="closeSuccessModal"
                         @confirm="deleteTask"/>
@@ -106,7 +106,7 @@
         </td>
 
         <td class="px-6 py-4">
-          <a  @click="editTask(index)" class="font-medium text-blue-600 hover:underline">Editar</a>
+          <a  @click="editTask(index)" class="font-medium text-blue-600 hover:underline cursor-pointer">Editar</a>
           <a href="#" class="font-medium text-red-600 hover:underline ml-2"
              @click="confirmDeleteTask(index)">Eliminar</a>
         </td>

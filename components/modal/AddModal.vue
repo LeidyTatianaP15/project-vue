@@ -49,6 +49,12 @@ const handleSubmit = (event: Event) => {
   emit('success');
 };
 
+if (props.type === 'edit') {
+  title.value = props.task.title;
+  description.value = props.task.description;
+  status.value = props.task.status;
+}
+
 </script>
 
 <template>
